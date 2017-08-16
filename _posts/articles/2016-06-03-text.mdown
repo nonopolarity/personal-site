@@ -1,0 +1,14 @@
+---
+layout: post
+title: Perceptual Biases in Font Size as a Data Encoding
+excerpt: "Perceptual Biases in Font Size as a Data Encoding."
+modified: 2017-06-03T14:17:25-04:00
+categories: articles
+tags: [project]
+comments: true
+share: true
+---
+
+Many visualizations, including word clouds, cartographic labels, and word trees, encode data within the sizes of fonts. While font size can be an intuitive dimension for the viewer, using it as an encoding can introduce factors that may bias the perception of the underlying values. Viewers might conflate the size of a word's font with a word's length, the number of letters it contains, or with the larger or smaller heights of particular characters ('o' vs. 'p' vs. 'b'). We present a collection of empirical studies showing that such factors---which are irrelevant to the encoded values---can indeed influence comparative judgements of font size, though less than conventional wisdom might suggest. We highlight the largest potential biases, and describe a strategy to mitigate them.
+
+Please check our project page [here](http://graphics.cs.wisc.edu/Papers/2017/ACSFCG17/).

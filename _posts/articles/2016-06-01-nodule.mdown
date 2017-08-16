@@ -1,0 +1,14 @@
+---
+layout: post
+title: CS767 Medical Image Processing Project
+excerpt: "Lung Nodule Detection in X-ray Image."
+modified: 2016-05-15T14:17:25-04:00
+categories: articles
+tags: [project]
+comments: true
+share: true
+---
+
+We utilize deep learning method and common image processing methods to detect nodules in X-ray images.
+
+Please check our github page [here](https://github.com/eyeccc/767FinalProject).

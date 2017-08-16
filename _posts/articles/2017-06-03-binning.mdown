@@ -1,0 +1,14 @@
+---
+layout: post
+title: Binning
+excerpt: "Exploration of different designs of binning."
+modified: 2017-06-03T14:17:25-04:00
+categories: articles
+tags: [project]
+comments: true
+share: true
+---
+
+Exploration of Visual Designs for Binned Aggregation of Multi-Class Data.
+
+Please check our github page [here](https://github.com/eyeccc/Binning) and check our demo page [here](https://binning.herokuapp.com/).
