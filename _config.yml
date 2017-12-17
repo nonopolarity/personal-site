@@ -4,8 +4,8 @@ title: Chih-Ching Chang
 locale: en_US
 description: Love coding, music, art, design, travel, animal.
 logo: icon.png
-search: true
-url: https://eyeccc.github.io
+search: false
+url: #https://eyeccc.github.io
 
 # Jekyll configuration
 
@@ -41,7 +41,7 @@ owner:
   avatar: ching-photo-1.png
   email: #email
   disqus-shortname: chihching
-  twitter: eyeccc
+  twitter: #username
   facebook: #username
   github: eyeccc
   stackexchange: #http://stackoverflow.com/users/123456/username

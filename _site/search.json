@@ -3,7 +3,7 @@
   
     {
       "title"			: "Binning",
-      "link"			: "https://eyeccc.github.io/articles/binning/",
+      "link"			: "http://localhost:4000/articles/binning/",
       "excerpt"		: "Exploration of different designs of binning."
     }
   
@@ -11,7 +11,7 @@
   
     ,{
       "title"			: "Perceptual Biases in Font Size as a Data Encoding",
-      "link"			: "https://eyeccc.github.io/articles/text/",
+      "link"			: "http://localhost:4000/articles/text/",
       "excerpt"		: "Perceptual Biases in Font Size as a Data Encoding."
     }
   
@@ -19,7 +19,7 @@
   
     ,{
       "title"			: "Project Vibl",
-      "link"			: "https://eyeccc.github.io/articles/vibl/",
+      "link"			: "http://localhost:4000/articles/vibl/",
       "excerpt"		: "A Feedback tool for Web developers to improve the accessibility of applications they build."
     }
   
@@ -27,7 +27,7 @@
   
     ,{
       "title"			: "CS767 Medical Image Processing Project",
-      "link"			: "https://eyeccc.github.io/articles/nodule/",
+      "link"			: "http://localhost:4000/articles/nodule/",
       "excerpt"		: "Lung Nodule Detection in X-ray Image."
     }
   
@@ -35,16 +35,8 @@
   
     ,{
       "title"			: "CS766 Computer Vision Project",
-      "link"			: "https://eyeccc.github.io/articles/nn-art/",
+      "link"			: "http://localhost:4000/articles/nn-art/",
       "excerpt"		: "Reconstruct and modify a current paper regarding using neural network to build art work."
-    }
-  
-
-  
-    ,{
-      "title"			: "First Post!",
-      "link"			: "https://eyeccc.github.io/blog/first-post/",
-      "excerpt"		: "This is the first post in my new blog implemented by jekyll and hosted on github.I will try to record what new things I’ve learned about technology in this new blog :)"
     }
   
 
@@ -63,17 +55,11 @@
   
     ,{
       "title"			: "Theme Setup",
-      "link"			: "https://eyeccc.github.io/theme-setup/",
+      "link"			: "http://localhost:4000/theme-setup/",
       "excerpt"		: "Instructions on how to install and customize the Jekyll theme So Simple."
     }
   
 
-  
-    ,{
-      "title"			: "About Chih-Ching",
-      "link"			: "https://eyeccc.github.io/about/",
-      "excerpt"		: "A programmer who is interested in front-end development."
-    }
   
 
   

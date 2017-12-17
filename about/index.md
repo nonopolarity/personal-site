@@ -7,6 +7,7 @@ image:
   feature: hero.jpg
   credit: UW-Madison
   creditlink: http://www.wisc.edu/visit/
+search_omit: true
 ---
 
 I am a developer who is interested in frontend development, data visualization and human-computer interaction.
