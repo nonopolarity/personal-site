@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Chih-Ching Chang`,
     description: `Another normal creature who happens to be a developer.`,
-    copyrights: 'https://twitter.com/yeuxeye',
+    copyrights: '',
     author: `@yeuxeye`,
     logo: {
       src: '',
@@ -81,6 +81,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-141822886-1',
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -96,6 +102,13 @@ module.exports = {
             options: {
               maxWidth: 800,
               quality: 100,
+            },
+          },
+          {
+            resolve: `gatsby-remark-embed-gist`,
+            options: {
+              username: 'eyeccc',
+              includeDefaultCss: true,
             },
           },
           {
