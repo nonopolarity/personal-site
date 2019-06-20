@@ -110,32 +110,36 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     }, sortedPages)
 
     // Create tag pages
-    const tags = filter(
-      tag => not(isNil(tag)),
-      uniq(flatMap(post => post.frontmatter.tags, posts)),
-    )
-
-    forEach(tag => {
-      const postsWithTag = posts.filter(
-        post =>
-          post.frontmatter.tags && post.frontmatter.tags.indexOf(tag) !== -1,
+    const generateTagPages = data => {
+      const tags = filter(
+        tag => not(isNil(tag)),
+        uniq(flatMap(d => d.frontmatter.tags, data)),
       )
+    
+      forEach(tag => {
+        const itemsWithTag = data.filter(
+          d =>
+            d.frontmatter.tags && d.frontmatter.tags.indexOf(d) !== -1,
+        );
+    
+        paginate({
+          createPage,
+          items: itemsWithTag,
+          component: tagsTemplate,
+          itemsPerPage: siteMetadata.postsPerPage,
+          pathPrefix: `/tag/${toKebabCase(tag)}`,
+          context: {
+            tag,
+          },
+        })
+      }, tags)
+    };
 
-      paginate({
-        createPage,
-        items: postsWithTag,
-        component: tagsTemplate,
-        itemsPerPage: siteMetadata.postsPerPage,
-        pathPrefix: `/tag/${toKebabCase(tag)}`,
-        context: {
-          tag,
-        },
-      })
-    }, tags)
+    generateTagPages(posts);
+    generateTagPages(projects);
 
     return {
       sortedPages,
-      tags,
     }
   })
 }

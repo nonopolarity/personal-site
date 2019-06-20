@@ -1,7 +1,7 @@
 ---
 title: Visual Designs for Binned Aggregation of Multi-Class Scatterplots (arXiv ver.)
 excerpt: "In this paper, we explore the space of visual designs for such data, and provide design guidelines for different analysis scenarios."
-tags: [project]
+tags: [project, visualization, aggregation]
 date: "2018-10-08"
 author: "Chih-Ching Chang"
 path: "/binning-paper"

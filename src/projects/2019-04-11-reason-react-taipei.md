@@ -1,7 +1,7 @@
 ---
 title: Reason React Taipei
 excerpt: "A simple app introducing places in Taipei built with Reason React."
-tags: [reasonml]
+tags: [project, workshop, reasonml]
 date: "2019-04-11"
 author: "Chih-Ching Chang"
 path: "/reason-react-taipei"

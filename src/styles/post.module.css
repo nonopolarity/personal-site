@@ -26,6 +26,34 @@
   }
 }
 
+
+.project {
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  padding: 20px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--light-border-color);
+
+    :global .dark-theme :local & {
+      border-color: var(--dark-border-color);
+    }
+  }
+
+  @media (--tablet) {
+    max-width: 660px;
+  }
+
+  h1 {
+    margin: 0 0 10px;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+}
+
 .title {
   a {
     text-decoration: none;
@@ -43,8 +71,16 @@
   margin-bottom: 30px;
 }
 
+.projectMeta {
+  font-size: 1rem;
+}
+
 .tags {
   margin-top: 10px;
+  opacity: .5;
+}
+
+.projectTags {
   opacity: .5;
 }
 
@@ -58,6 +94,13 @@
   text-decoration: none;
   font-weight: bold;
   margin: 20px 0;
+  font-size: 1rem;
+}
+
+.projectReadMore {
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.7;
   font-size: 1rem;
 }
 

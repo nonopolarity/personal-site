@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
-import Post from '../components/post';
+import Project from '../components/project';
 import Navigation from '../components/navigation';
 
 const ProjectPage = ({
@@ -23,18 +23,14 @@ const ProjectPage = ({
             id,
             excerpt: autoExcerpt,
             frontmatter: { title, date, path, coverImage, excerpt, tags },
-            fields: {
-              readingTime: { text },
-            },
           } = node;
 
           return (
-            <Post
+            <Project
               key={id}
               title={title}
               date={date}
               path={path}
-              readingTimeText={text}
               coverImage={coverImage}
               tags={tags}
               excerpt={excerpt || autoExcerpt}
@@ -73,11 +69,6 @@ export const postsQuery = graphql`
         node {
           id
           excerpt
-          fields {
-            readingTime {
-              text
-            }
-          }
           frontmatter {
             title
             date(formatString: "DD MMMM YYYY")
