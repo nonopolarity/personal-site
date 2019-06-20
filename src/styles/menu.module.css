@@ -55,7 +55,7 @@
 }
 .menuItem {
   &:hover {
-    border-bottom: rgba(0, 204, 204, 0.5) solid 2px;
+    border-bottom: #0cc solid 2px;
   }
 }
 

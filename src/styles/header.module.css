@@ -1,5 +1,5 @@
 .header {
-  background: #fafafa;
+  background: #1ba2ad;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,7 +7,7 @@
   padding: 20px;
 
   :global .dark-theme :local & {
-    background: #252627;
+    background: #0f6167;
   }
 
   a {
