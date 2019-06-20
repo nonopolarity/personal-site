@@ -28,6 +28,11 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
               tags
             }
             fileAbsolutePath
+            fields {
+              readingTime {
+                text
+              }
+            }
           }
         }
       }
@@ -129,7 +134,6 @@ exports.sourceNodes = ({ actions }) => {
 
     type Frontmatter {
       title: String!
-      author: String
       date: Date!
       path: String!
       tags: [String!]

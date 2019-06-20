@@ -12,12 +12,12 @@ const Post = ({
   date,
   path,
   coverImage,
-  author,
   excerpt,
   tags,
   html,
   previousPost,
   nextPost,
+  readingTimeText,
 }) => {
   const previousPath = previousPost && previousPost.frontmatter.path;
   const previousLabel = previousPost && previousPost.frontmatter.title;
@@ -31,7 +31,7 @@ const Post = ({
           {excerpt ? <Link to={path}>{title}</Link> : title}
         </h1>
         <div className={style.meta}>
-          {date} {author && <>— Written by {author}</>}
+          {date} {`•`} {readingTimeText}
           {tags ? (
             <div className={style.tags}>
               {tags.map(tag => (
@@ -78,7 +78,7 @@ Post.propTypes = {
   date: PropTypes.string,
   path: PropTypes.string,
   coverImage: PropTypes.object,
-  author: PropTypes.string,
+  readingTimeText: PropTypes.string,
   excerpt: PropTypes.string,
   html: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
