@@ -8,10 +8,13 @@ import Post from '../components/post';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {
-    frontmatter: { title, date, path, author, coverImage, excerpt, tags },
+    frontmatter: { title, date, path, coverImage, excerpt, tags },
     excerpt: autoExcerpt,
     id,
     html,
+    fields: {
+      readingTime: { text },
+    },
   } = data.markdownRemark;
   const { next, previous } = pageContext;
 
@@ -23,7 +26,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         title={title}
         date={date}
         path={path}
-        author={author}
+        readingTimeText={text}
         coverImage={coverImage}
         html={html}
         tags={tags}
@@ -51,7 +54,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "DD MMMM YYYY")
         path
-        author
         excerpt
         tags
         coverImage {
@@ -65,6 +67,11 @@ export const pageQuery = graphql`
       id
       html
       excerpt
+      fields {
+        readingTime {
+          text
+        }
+      }
     }
   }
 `;

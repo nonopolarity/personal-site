@@ -18,7 +18,7 @@ module.exports = {
     logoText: 'chihching',
     defaultTheme: 'dark',
     postsPerPage: 5,
-    showMenuItems: 2,
+    showMenuItems: 3,
     menuMoreText: 'Show more',
     mainMenu: [
       {
@@ -30,8 +30,8 @@ module.exports = {
         path: '/projects',
       },
       {
-        title: 'Example',
-        path: '/example',
+        title: 'Blog',
+        path: '/',
       },
     ],
   },
