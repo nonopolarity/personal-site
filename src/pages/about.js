@@ -2,35 +2,39 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-
+// import Img from 'gatsby-image';
+// import { graphql } from "gatsby";
 import style from '../styles/post.module.css';
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="About Chih-Ching" />
+    <SEO title="Chih-Ching Chang" />
     <div className={style.post}>
       <div className={style.postContent}>
-        <h3>Hi there</h3>
+        {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
+        <h2>Chih-Ching Chang</h2>
+        <h3>Software Engineer</h3>
         <p>
-          I am a developer who is interested in frontend development, data
-          visualization and human-computer interaction. I also have experience
-          in fullstack web development, machine learning, computer graphics and
-          cryptography.
+          Placeholder
         </p>
-        Sometimes I help open source projects' localization in my spare time :)
-        <ul>
-          <li>
-            <a href="https://crowdin.com/profile/eyeccc">Crowdin</a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/zh-TW/profiles/eyeccc">
-              MDN Web Docs
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </Layout>
 );
+
+/*
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "images/chihching.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }`;
+  */
 
 export default AboutPage;
