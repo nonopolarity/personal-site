@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Post from '../components/post';
 import Navigation from '../components/navigation';
 
-const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
+const Posts = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   const {
     allMarkdownRemark: { edges: posts },
   } = data;
@@ -50,7 +50,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   );
 };
 
-Index.propTypes = {
+Posts.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.shape({
     nextPagePath: PropTypes.string,
@@ -96,4 +96,4 @@ export const postsQuery = graphql`
   }
 `;
 
-export default Index;
+export default Posts;

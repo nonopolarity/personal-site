@@ -8,7 +8,7 @@ const getType = node => node.fileAbsolutePath.match(pageTypeRegex)[1]
 
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const projectsTemplate = path.resolve(`./src/templates/projects.js`)
-const indexTemplate = path.resolve(`./src/templates/index.js`)
+const postsTemplate = path.resolve(`./src/templates/posts.js`)
 const tagsTemplate = path.resolve(`./src/templates/tags.js`)
 
 exports.createPages = ({ actions, graphql, getNodes }) => {
@@ -76,9 +76,9 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     paginate({
       createPage,
       items: posts,
-      component: indexTemplate,
+      component: postsTemplate,
       itemsPerPage: siteMetadata.postsPerPage,
-      pathPrefix: '/',
+      pathPrefix: '/blog',
     })
 
     paginate({

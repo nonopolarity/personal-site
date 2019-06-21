@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         title: 'Blog',
-        path: '/',
+        path: '/blog',
       },
     ],
   },
