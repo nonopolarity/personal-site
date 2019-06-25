@@ -6,6 +6,7 @@ const { toKebabCase } = require('./src/helpers')
 const pageTypeRegex = /src\/(.*?)\//
 const getType = node => node.fileAbsolutePath.match(pageTypeRegex)[1]
 
+const homeTemplate = path.resolve(`./src/templates/index.js`)
 const pageTemplate = path.resolve(`./src/templates/page.js`)
 const projectsTemplate = path.resolve(`./src/templates/projects.js`)
 const postsTemplate = path.resolve(`./src/templates/posts.js`)
@@ -47,6 +48,12 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+
+    // create home page
+    createPage({
+      path: '/',
+      component: homeTemplate,
+    })
 
     const {
       allMarkdownRemark: { edges: markdownPages },
