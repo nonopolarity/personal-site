@@ -1,0 +1,21 @@
+.link {
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.creditTxt {
+  font-size: xx-small;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: white;
+
+  a {
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+    padding-left: 8px;
+  }
+}
