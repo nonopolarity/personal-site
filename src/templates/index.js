@@ -22,10 +22,10 @@ const HomePage = ({ data }) => (
           I am Chih-Ching Chang, a software engineer from Taiwan. My work mainly
           focuses on frontend development. Sometimes I help open source
           projects' localization, such as{' '}
-          <a href="https://crowdin.com/profile/eyeccc">Crowdin</a> or{' '}
+          <a href="https://crowdin.com/profile/eyeccc">Crowdin</a>, {' '}
           <a href="https://developer.mozilla.org/zh-TW/profiles/eyeccc">
             MDN Web Docs
-          </a>{' '}
+          </a>{' '}or{' '}<a href="https://github.com/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Aeyeccc+translate">Github</a>
           , in my spare time :)
         </p>
       </div>
