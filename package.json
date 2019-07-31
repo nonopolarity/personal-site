@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-hello-friend",
+  "name": "gatsby-site",
   "description": "A simple starter for Gatsby. That's it.",
   "version": "0.1.0",
   "author": "Chih-Ching Chang",
@@ -18,7 +18,6 @@
     "build": "gatsby build",
     "dev": "gatsby clean && gatsby develop",
     "format": "prettier --single-quote --write \"src/**/*.js\"",
-    "deploy": "gatsby build && gh-pages -d public -b master",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "dependencies": {
@@ -70,9 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/panr/gatsby-starter-hello-friend"
-  },
-  "bugs": {
-    "url": "https://github.com/panr/gatsby-starter-hello-friend/issues"
+    "url": "https://github.com/eyeccc/personal-site",
+    "preview-url": "https://www.chihching.net"
   }
 }
