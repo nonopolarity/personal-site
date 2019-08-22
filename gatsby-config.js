@@ -8,7 +8,7 @@ const postCSSMixins = require('postcss-mixins')
 module.exports = {
   siteMetadata: {
     title: `Chih-Ching Chang`,
-    description: `Another normal creature who happens to be a developer.`,
+    description: `Another normal creature who happens to be a software engineer.`,
     copyrights: '',
     author: `@yeuxeye`,
     logo: {
@@ -22,12 +22,12 @@ module.exports = {
     menuMoreText: 'Show more',
     mainMenu: [
       {
-        title: 'Projects',
-        path: '/projects',
+        title: 'About',
+        path: '/about',
       },
       {
-        title: 'Blog',
-        path: '/blog',
+        title: 'Projects',
+        path: '/projects',
       },
     ],
   },

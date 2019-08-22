@@ -51,7 +51,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
 
     // create home page
     createPage({
-      path: '/',
+      path: '/about',
       component: homeTemplate,
     })
 
@@ -85,7 +85,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
       items: posts,
       component: postsTemplate,
       itemsPerPage: siteMetadata.postsPerPage,
-      pathPrefix: '/blog',
+      pathPrefix: '/',
     })
 
     paginate({
