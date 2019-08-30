@@ -16,7 +16,7 @@ module.exports = {
       alt: '',
     },
     logoText: 'chihching',
-    defaultTheme: 'dark',
+    defaultTheme: 'light',
     postsPerPage: 5,
     showMenuItems: 3,
     menuMoreText: 'Show more',

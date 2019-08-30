@@ -7,7 +7,12 @@ const Icon = props => {
   const { d, size = '1em', label, style: styles } = props;
 
   return (
-    <span className={style.root} style={styles} role="figure">
+    <span
+      className={style.root}
+      style={styles}
+      role="button"
+      aria-label="toggle-dark-theme-btn"
+    >
       <svg
         version="1.1"
         width={size}

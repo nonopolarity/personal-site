@@ -15,6 +15,7 @@ const Footer = () => (
     <div className="footerIconGroup">
       <a
         className="iconLink"
+        aria-label="Go to github link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://github.com/eyeccc"
@@ -23,6 +24,7 @@ const Footer = () => (
       </a>
       <a
         className="iconLink"
+        aria-label="Go to twitter link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://twitter.com/yeuxeye"
@@ -31,6 +33,7 @@ const Footer = () => (
       </a>
       <a
         className="iconLink"
+        aria-label="Go to linkedin link"
         target="_blank"
         rel="noopener noreferrer"
         href="https://www.linkedin.com/in/chihchingchang/"
