@@ -67,4 +67,6 @@ custom:
 A strange part when I was trying renovate config is that somehow renovate does not understand `platform` in `renovate.json`, you need to add it explicitly on CLI command.
 Also, the most annoying part of the config experiments is that it only works on master branch _by default_. Thus, you cannot directly try the new config on your pull request branch :(
 
+Last but not least, if you want to trigger renovate bot like a cron job, you could set up [bitbucket pipelines schedule](https://confluence.atlassian.com/bitbucket/scheduled-pipelines-933078702.html).
+
 These simple setups fulfill our requirements. You might want to change to [renovate pro version](https://docs.renovatebot.com/pro/overview/) for more functionalities that are lack in the npm version.
