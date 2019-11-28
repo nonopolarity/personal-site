@@ -20,7 +20,12 @@ const HomePage = ({ data }) => (
         <h3>Hi there</h3>
         <p>
           I am Chih-Ching Chang, a software engineer from Taiwan. My work mainly
-          focuses on frontend development. Sometimes I help open source
+          focuses on frontend development. My tech stack for my daily work includes
+          React (Hooks), GraphQL, TypeScript... etc.
+          I also like to learn new stuff not limited to front-end fields (e.g., Jenkins or Docker).
+        </p>
+        <p>
+          Sometimes I help open source
           projects' localization, such as{' '}
           <a href="https://crowdin.com/profile/eyeccc">Crowdin</a> or{' '}
           <a href="https://developer.mozilla.org/zh-TW/profiles/eyeccc">
