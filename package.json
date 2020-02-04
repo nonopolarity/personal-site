@@ -54,7 +54,7 @@
     "eslint-config-prettier": "3.6.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "1.6.0",
     "gatsby-remark-embed-video": "1.7.1",
     "gh-pages": "2.0.1",
