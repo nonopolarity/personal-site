@@ -44,9 +44,9 @@
     "react-helmet": "5.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-nullish-coalescing-operator": "7.2.0",
-    "@babel/plugin-proposal-optional-chaining": "7.2.0",
-    "babel-eslint": "10.0.1",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "7.8.3",
+    "babel-eslint": "10.0.3",
     "babel-preset-gatsby": "0.1.10",
     "cssnano": "4.1.10",
     "eslint": "5.15.3",
