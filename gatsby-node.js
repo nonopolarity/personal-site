@@ -60,12 +60,12 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
       site: { siteMetadata },
     } = result.data
 
-    const sortedPages = markdownPages.sort((pageA, pageB) => {
+    /* const sortedPages = markdownPages.sort((pageA, pageB) => {
       const typeA = getType(pageA.node)
       const typeB = getType(pageB.node)
 
       return (typeA > typeB) - (typeA < typeB)
-    })
+    }) */
 
     const posts = allNodes.filter(
       ({ internal, fileAbsolutePath }) =>
@@ -73,11 +73,11 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
         fileAbsolutePath.indexOf('/posts/') !== -1,
     )
 
-    const projects = allNodes.filter(
+    /* const projects = allNodes.filter(
       ({ internal, fileAbsolutePath }) =>
         internal.type === 'MarkdownRemark' &&
         fileAbsolutePath.indexOf('/projects/') !== -1,
-    )
+    ) */
 
     // Create posts index with pagination
     paginate({
@@ -88,19 +88,19 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
       pathPrefix: '/',
     })
 
-    paginate({
+    /* paginate({
       createPage,
       items: projects,
       component: projectsTemplate,
       itemsPerPage: siteMetadata.postsPerPage,
       pathPrefix: '/projects',
-    })
+    }) */
 
     // Create each markdown page and post
     forEach(({ node }, index) => {
-      const previous = index === 0 ? null : sortedPages[index - 1].node
+      const previous = index === 0 ? null : markdownPages[index - 1].node
       const next =
-        index === sortedPages.length - 1 ? null : sortedPages[index + 1].node
+        index === markdownPages.length - 1 ? null : markdownPages[index + 1].node
       const isNextSameType = getType(node) === (next && getType(next))
       const isPreviousSameType =
         getType(node) === (previous && getType(previous))
@@ -114,7 +114,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
           previous: isPreviousSameType ? previous : null,
         },
       })
-    }, sortedPages)
+    }, markdownPages)
 
     // Create tag pages
     const generateTagPages = data => {
@@ -143,10 +143,10 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     };
 
     generateTagPages(posts);
-    generateTagPages(projects);
+    // generateTagPages(projects);
 
     return {
-      sortedPages,
+      sortedPages: markdownPages,
     }
   })
 }

@@ -25,10 +25,10 @@ module.exports = {
         title: 'About',
         path: '/about',
       },
-      {
+      /* {
         title: 'Projects',
         path: '/projects',
-      },
+      }, */
     ],
   },
   plugins: [
