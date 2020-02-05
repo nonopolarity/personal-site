@@ -255,6 +255,9 @@ server.listen({port: 4100}).then(({ url }) => {
 
 當我在嘗試 Apollo Federation 的時候想到了幾個問題：
 1. 萬一其中一個子 service 壞了會影響到使用者嗎？
+
+目前測試的結果是子 service 壞了，使用者只會在想要獲取那個壞掉的 service 相關的資料的時候才會壞掉。
+
 2. 如果每個 service 是利用不同的實作來呈現（例如 apollo v.s. relay），這樣我們該如何整合呢？
 >TO BE MODIFIED
 
