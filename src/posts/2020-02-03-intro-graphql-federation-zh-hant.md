@@ -256,10 +256,18 @@ server.listen({port: 4100}).then(({ url }) => {
 當我在嘗試 Apollo Federation 的時候想到了幾個問題：
 1. 萬一其中一個子 service 壞了會影響到使用者嗎？
 
-目前測試的結果是子 service 壞了，使用者只會在想要獲取那個壞掉的 service 相關的資料的時候才會壞掉。
+> 目前測試的結果是子 service 壞了，使用者只會在想要獲取那個壞掉的 service 相關的資料的時候才會壞掉。
 
 2. 如果每個 service 是利用不同的實作來呈現（例如 apollo v.s. relay），這樣我們該如何整合呢？
->TO BE MODIFIED
+
+> 如果是利用 Relay 來實作 GraphQL，Facebook 官方的文件表示，他需要符合「[Relay Global Object Identification Specification](https://facebook.github.io/relay/graphql/objectidentification.htm)」，
+然而利用 Apollo 實作的 GraphQL 並沒有這個特性，如果兩個 server 的實作細節差異很大，
+我們有辦法利用 federation 來整合嗎？
+實測的結果是可以利用一樣的方式把每個 service 擁有 federated 的特性。
+
+3. 進階的 authentication 或是 cache 的機制改怎麼處理？
+
+> TBD
 
 ## 其他語言的 GraphQL Federation 套件
 
