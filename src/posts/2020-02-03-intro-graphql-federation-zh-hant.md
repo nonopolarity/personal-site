@@ -267,7 +267,9 @@ server.listen({port: 4100}).then(({ url }) => {
 
 3. 進階的 authentication 或是 cache 的機制改怎麼處理？
 
-> TBD
+> 目前還沒有實際實驗到這個部分，
+但可以想到如果不同的 microservice 有不同的 auth 或是 cache 機制，
+我們可能會需要思考該怎麼處理這樣的情形，不同的 cache 時間會影響到我們整個 graph 資料的正確性嗎？
 
 ## 其他語言的 GraphQL Federation 套件
 
@@ -277,6 +279,10 @@ Apollo 官方有定義出 Federation Schema 的 [spec](https://www.apollographql
 - Python: [Graphene](https://pypi.org/project/graphene-federation/), [Ariadne](https://pypi.org/project/ariadne-extensions/)
 - Java: [JVM](https://github.com/apollographql/federation-jvm)
 - maybe others...?
+
+## 寫在最後
+
+如果有其他的進階實驗，會再寫文章分享心得。
 
 ##### Reference:
 ##### 本篇用到的範例是從[這篇文章](https://itnext.io/a-guide-to-graphql-schema-federation-part-1-995b639ac035)來的。
