@@ -190,7 +190,8 @@ const server = new ApolloServer({
 });
 ```
 
-我們利用 Apollo 提供的套件 `@apollo/federation`，加上新的 `User` 的 resolver 來實現這件事。
+我們利用 Apollo 提供的套件 `@apollo/federation`，
+加上新的 `User` 的 `__resolveReference` 來實現這件事。
 這個 `User` 的 resolver 可以想成是，因為我們利用 `id` 做為某個 instance 的 key，
 所以在其他 server 呼叫的時候，我們要透過這個 id 去拿對應的 user 的相關資料。
 
@@ -253,7 +254,7 @@ server.listen({port: 4100}).then(({ url }) => {
 
 ## 一些其他的小實驗
 
-當我在嘗試 Apollo Federation 的時候想到了幾個問題：
+當我在嘗試 Apollo Federation 且與同事討論的過程中，想到了幾個問題：
 1. 萬一其中一個子 service 壞了會影響到使用者嗎？
 
 > 目前測試的結果是子 service 壞了，使用者只會在想要獲取那個壞掉的 service 相關的資料的時候才會壞掉。
@@ -270,6 +271,15 @@ server.listen({port: 4100}).then(({ url }) => {
 > 目前還沒有實際實驗到這個部分，
 但可以想到如果不同的 microservice 有不同的 auth 或是 cache 機制，
 我們可能會需要思考該怎麼處理這樣的情形，不同的 cache 時間會影響到我們整個 graph 資料的正確性嗎？
+
+4. 不同 server 互相來回 resolve 欄位，效能會變差嗎？比如說 A server 需要 B 的某個欄位，而 B 底下又需要 A 的某個欄位。
+
+> 我覺得這個實際上可能需要靠 Graph Manager 去實際看 query plan 是怎麼進行的，
+不過想像中如果會需要不同 server 互相呼叫，效能的確很有可能變差，
+但如同一開始提到的設計原則：我們應該要依照 feature 來切分不同 service，
+而不該依照 type 來切分，
+所以在單一個 query 的情況下，依照這個原則設計的 server，
+想像中不應該遇到很多 server 互相來回呼叫的問題。
 
 ## 其他語言的 GraphQL Federation 套件
 
