@@ -44,6 +44,8 @@ export const useMyContext = () => {
 };
 ```
 
+#### Class Component
+
 First, in **class component**, we could write it like what official document suggests:
 
 ```javascript
@@ -58,6 +60,8 @@ class MyClass extends React.Component {
 }
 ```
 
+#### React Hooks
+
 Or if you are writing functional component, you could use **React Hooks**.
 
 ```javascript
@@ -68,6 +72,8 @@ const MyComponent = () => {
   return (/* render something based on someValue */);
 };
 ```
+
+#### Recompose
 
 In our code base, there are components using **`recompose`**.
 At first, I think it's functional component because of its written style.
@@ -88,6 +94,8 @@ const MyComponent = enhance(({ someValue }) => {
 };
 
 ```
+
+#### ReasonReact
 
 Bonus part! If you are using **`ReasonReact`**, 
 they provide how to get context value in [their document](https://github.com/reasonml/reason-react/blob/master/docs/context-mixins.md).
