@@ -44,7 +44,7 @@ export const useMyContext = () => {
 };
 ```
 
-First, in class component, we could write it like what official document suggests:
+First, in **class component**, we could write it like what official document suggests:
 
 ```javascript
 import { MyContext } from './myContext';
@@ -58,7 +58,7 @@ class MyClass extends React.Component {
 }
 ```
 
-Or if you are writing functional component, you could use React Hooks.
+Or if you are writing functional component, you could use **React Hooks**.
 
 ```javascript
 import { useMyContext } from './myContext';
@@ -69,8 +69,8 @@ const MyComponent = () => {
 };
 ```
 
-In our code base, there are components using `recompose`.
-At first, I think it's functional component because of its writing style.
+In our code base, there are components using **`recompose`**.
+At first, I think it's functional component because of its written style.
 Yet, we cannot use hooks directly inside it.
 
 And... I found another way to use context inside this kind of component, called [`fromRenderProps`](https://github.com/acdlite/recompose/blob/master/docs/API.md#fromrenderprops).
@@ -86,6 +86,31 @@ const enhance =
 const MyComponent = enhance(({ someValue }) => {
   return (/* render something based on someValue */);
 };
+
+```
+
+Bonus part! If you are using **`ReasonReact`**, 
+they provide how to get context value in [their document](https://github.com/reasonml/reason-react/blob/master/docs/context-mixins.md).
+
+
+```reason
+/* ContextProvider.re */
+let themeContext = React.createContext("light");
+
+let makeProps = (~value, ~children, ()) => {
+  "value": value,
+  "children": children,
+};
+
+let make = React.Context.provider(themeContext);
+
+/* ConsumerComponent.re */
+[@react.component]
+let make = () => {
+  let theme = React.useContext(ContextProvider.themeContext);
+
+  <h1>theme->React.string</h1>
+}
 
 ```
 
