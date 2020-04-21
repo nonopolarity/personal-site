@@ -95,6 +95,29 @@ const MyComponent = enhance(({ someValue }) => {
 
 ```
 
+#### createReactClass
+
+If you are migrating from React 15 to React to 16, 
+your code base might use `create-react-class` for adopting React 16.
+Similar to class component, you will need `this.context`. 
+The setup is a bit different though.
+
+```javascript
+import createReactClass from 'create-react-class';
+import { MyContext } from './myContext';
+
+const MyComponent = createReactClass({
+  render() {
+    const { someValue } = this.context;
+    return (/* render something based on someValue */);
+  }
+});
+
+MyComponent.contextType = MyContext;
+
+```
+
+
 #### ReasonReact
 
 Bonus part! If you are using **`ReasonReact`**, 
