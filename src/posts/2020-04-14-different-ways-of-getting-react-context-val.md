@@ -7,10 +7,10 @@ path: "/different-ways-of-getting-react-context-val"
 ---
 
 Recently I am refactoring our code base for extracting out similar logic to [React Context](https://reactjs.org/docs/context.html).
-Since our code base has maintained by several developers over the years, there are a lot of different kinds of coding style.
+Since our code base has been maintained by several developers over the years, there are a lot of different kinds of coding style.
 I would like to write a post to note down how to use React Context value in different situations.
 
-Supposed we have a context look like the following:
+Suppose we have a context that looks like the following:
 
 ```javascript
 import React from 'react';
@@ -46,7 +46,7 @@ export const useMyContext = () => {
 
 #### Class Component
 
-First, in **class component**, we could write it like what official document suggests:
+First, in **class component**, we could write it like what the official document suggests:
 
 ```javascript
 import { MyContext } from './myContext';
